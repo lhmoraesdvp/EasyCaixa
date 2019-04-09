@@ -1,6 +1,6 @@
 ﻿namespace easyERP
 {
-    partial class Form1
+    partial class homeForm
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(homeForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +39,13 @@
             this.contasAPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeOperadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastroDeProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabelasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrosDeProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grupoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametrosFinanceirosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -68,8 +74,8 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
@@ -152,15 +158,63 @@
             // 
             // cadastrosToolStripMenuItem
             // 
+            this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroDeOperadorToolStripMenuItem,
+            this.cadastroDeProdutoToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
+            // cadastroDeOperadorToolStripMenuItem
+            // 
+            this.cadastroDeOperadorToolStripMenuItem.Name = "cadastroDeOperadorToolStripMenuItem";
+            this.cadastroDeOperadorToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.cadastroDeOperadorToolStripMenuItem.Text = "Cadastro de operador";
+            // 
+            // cadastroDeProdutoToolStripMenuItem
+            // 
+            this.cadastroDeProdutoToolStripMenuItem.Name = "cadastroDeProdutoToolStripMenuItem";
+            this.cadastroDeProdutoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.cadastroDeProdutoToolStripMenuItem.Text = "Cadastro de produto";
+            // 
             // tabelasToolStripMenuItem
             // 
+            this.tabelasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parametrosDeProdutoToolStripMenuItem,
+            this.parametrosFinanceirosToolStripMenuItem});
             this.tabelasToolStripMenuItem.Name = "tabelasToolStripMenuItem";
-            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.tabelasToolStripMenuItem.Text = "Tabelas";
+            this.tabelasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
+            this.tabelasToolStripMenuItem.Text = "Parametros";
+            this.tabelasToolStripMenuItem.Click += new System.EventHandler(this.tabelasToolStripMenuItem_Click);
+            // 
+            // parametrosDeProdutoToolStripMenuItem
+            // 
+            this.parametrosDeProdutoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.grupoDeProdutosToolStripMenuItem,
+            this.tipoDeProdutosToolStripMenuItem});
+            this.parametrosDeProdutoToolStripMenuItem.Name = "parametrosDeProdutoToolStripMenuItem";
+            this.parametrosDeProdutoToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.parametrosDeProdutoToolStripMenuItem.Text = "Parametros de produto";
+            // 
+            // grupoDeProdutosToolStripMenuItem
+            // 
+            this.grupoDeProdutosToolStripMenuItem.Name = "grupoDeProdutosToolStripMenuItem";
+            this.grupoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grupoDeProdutosToolStripMenuItem.Text = "Grupo de Produtos";
+            this.grupoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.grupoDeProdutosToolStripMenuItem_Click);
+            // 
+            // tipoDeProdutosToolStripMenuItem
+            // 
+            this.tipoDeProdutosToolStripMenuItem.Name = "tipoDeProdutosToolStripMenuItem";
+            this.tipoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoDeProdutosToolStripMenuItem.Text = "Tipo de Produtos";
+            this.tipoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeProdutosToolStripMenuItem_Click);
+            // 
+            // parametrosFinanceirosToolStripMenuItem
+            // 
+            this.parametrosFinanceirosToolStripMenuItem.Name = "parametrosFinanceirosToolStripMenuItem";
+            this.parametrosFinanceirosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.parametrosFinanceirosToolStripMenuItem.Text = "Parametros financeiros";
             // 
             // toolStrip1
             // 
@@ -213,7 +267,7 @@
             // toolStripButton14
             // 
             this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.Image = global::easyERP.Properties.Resources.edit_icon;
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.Size = new System.Drawing.Size(23, 22);
@@ -400,16 +454,16 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(37, 22);
             this.toolStripLabel1.Text = "Login";
             // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
+            // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(31, 22);
             this.toolStripLabel2.Text = "Data";
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
             // 
             // toolStripSeparator13
             // 
@@ -422,7 +476,7 @@
             this.toolStripLabel3.Size = new System.Drawing.Size(31, 22);
             this.toolStripLabel3.Text = "Data";
             // 
-            // Form1
+            // homeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,7 +485,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "homeForm";
             this.Text = "easyERP";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -490,6 +544,12 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripMenuItem cadastroDeOperadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastroDeProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parametrosDeProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grupoDeProdutosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDeProdutosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parametrosFinanceirosToolStripMenuItem;
     }
 }
 

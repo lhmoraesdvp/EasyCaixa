@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace easyERP
 {
-    public partial class Form1 : Form
+    public partial class homeForm : Form
     {
-        public Form1()
+        public homeForm()
         {
             InitializeComponent();
         }
@@ -76,5 +76,23 @@ namespace easyERP
         {
 
         }
+
+        private void tabelasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grupoDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            grupoPrdForm grpProdutos = new grupoPrdForm();
+            grpProdutos.ShowDialog();
+        }
+
+        private void tipoDeProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View.subgrupoPrdForm sbgprd = new View.subgrupoPrdForm();
+            sbgprd.ShowDialog();
+                
+                }
     }
 }

@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +55,57 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="easyCaixaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="easyCaixaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Clientes.cs" />
+    <Compile Include="Model\ContasAReceber.cs" />
+    <Compile Include="Model\cupom.cs" />
+    <Compile Include="Model\DB.cs" />
+    <Compile Include="Model\Endereco.cs" />
+    <Compile Include="Model\Entradas.cs" />
+    <Compile Include="Model\Estoque.cs" />
+    <Compile Include="Model\Fornecedores.cs" />
+    <Compile Include="Model\GrupoProduto.cs" />
+    <Compile Include="Model\Operador.cs" />
+    <Compile Include="Model\Produtos.cs" />
+    <Compile Include="Model\Saidas.cs" />
+    <Compile Include="Model\SubgrupoProduto.cs" />
+    <Compile Include="Model\sysdiagrams.cs" />
+    <Compile Include="Model\TipoEntrada.cs" />
+    <Compile Include="Model\tipoSaida.cs" />
+    <Compile Include="View\grupoPrdForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\grupoPrdForm.Designer.cs">
+      <DependentUpon>grupoPrdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\homeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\homeForm.Designer.cs">
+      <DependentUpon>homeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="View\subgrupoPrdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\subgrupoPrdForm.Designer.cs">
+      <DependentUpon>subgrupoPrdForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\grupoPrdForm.resx">
+      <DependentUpon>grupoPrdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\homeForm.resx">
+      <DependentUpon>homeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,7 +115,35 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\subgrupoPrdForm.resx">
+      <DependentUpon>subgrupoPrdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="easyCaixaDataSet.xsc">
+      <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="easyCaixaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>easyCaixaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="easyCaixaDataSet.xss">
+      <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="easyCaixaDataSet1.xsc">
+      <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="easyCaixaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>easyCaixaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="easyCaixaDataSet1.xss">
+      <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\easyERP.Model.GrupoProduto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +156,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avançar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
