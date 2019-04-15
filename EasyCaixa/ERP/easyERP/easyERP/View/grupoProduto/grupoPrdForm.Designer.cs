@@ -28,20 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(grupoPrdForm));
             this.grupoPrdGridView = new System.Windows.Forms.DataGridView();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.newBt = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.editBt = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.cancelbt = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.savebt = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.removeBt = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,50 +81,41 @@
             this.obsTxt = new System.Windows.Forms.TextBox();
             this.codTXT = new System.Windows.Forms.TextBox();
             this.descTxt = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descGrupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nvc1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.newBt = new System.Windows.Forms.ToolStripButton();
-            this.editBt = new System.Windows.Forms.ToolStripButton();
-            this.cancelbt = new System.Windows.Forms.ToolStripButton();
-            this.savebt = new System.Windows.Forms.ToolStripButton();
-            this.removeBt = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.easyCaixaDataSet = new easyERP.View.grupoProduto.easyCaixaDataSet();
+            this.grupoProdutoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.grupoProdutoTableAdapter = new easyERP.View.grupoProduto.easyCaixaDataSetTableAdapters.GrupoProdutoTableAdapter();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codGrupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descGrupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nvc1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grupoPrdGridView)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.nprdGrpBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.easyCaixaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grupoProdutoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // grupoPrdGridView
             // 
+            this.grupoPrdGridView.AllowUserToAddRows = false;
             this.grupoPrdGridView.AllowUserToDeleteRows = false;
             this.grupoPrdGridView.AllowUserToOrderColumns = true;
+            this.grupoPrdGridView.AutoGenerateColumns = false;
             this.grupoPrdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grupoPrdGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.codGrupo,
-            this.descGrupo,
-            this.nvc1});
+            this.Id,
+            this.codGrupoDataGridViewTextBoxColumn,
+            this.descGrupoDataGridViewTextBoxColumn,
+            this.nvc1DataGridViewTextBoxColumn});
+            this.grupoPrdGridView.DataSource = this.grupoProdutoBindingSource;
             this.grupoPrdGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.grupoPrdGridView.Location = new System.Drawing.Point(33, 39);
             this.grupoPrdGridView.Name = "grupoPrdGridView";
             this.grupoPrdGridView.ReadOnly = true;
-            this.grupoPrdGridView.Size = new System.Drawing.Size(767, 290);
+            this.grupoPrdGridView.Size = new System.Drawing.Size(795, 290);
             this.grupoPrdGridView.TabIndex = 0;
             // 
             // toolStrip1
@@ -146,60 +155,213 @@
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // newBt
+            // 
+            this.newBt.BackgroundImage = global::easyERP.Properties.Resources.add;
+            this.newBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.newBt.Image = global::easyERP.Properties.Resources.add;
+            this.newBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.newBt.Name = "newBt";
+            this.newBt.Size = new System.Drawing.Size(23, 22);
+            this.newBt.Text = "Incluir";
+            this.newBt.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // editBt
+            // 
+            this.editBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.editBt.Image = global::easyERP.Properties.Resources.edit_icon;
+            this.editBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.editBt.Name = "editBt";
+            this.editBt.Size = new System.Drawing.Size(23, 22);
+            this.editBt.Text = "toolStripButton1";
+            this.editBt.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // cancelbt
+            // 
+            this.cancelbt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cancelbt.Enabled = false;
+            this.cancelbt.Image = global::easyERP.Properties.Resources.cancel;
+            this.cancelbt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.cancelbt.Name = "cancelbt";
+            this.cancelbt.Size = new System.Drawing.Size(23, 22);
+            this.cancelbt.Text = "toolStripButton1";
+            this.cancelbt.Click += new System.EventHandler(this.toolStripButton13_Click);
+            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // savebt
+            // 
+            this.savebt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.savebt.Enabled = false;
+            this.savebt.Image = global::easyERP.Properties.Resources.save;
+            this.savebt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.savebt.Name = "savebt";
+            this.savebt.Size = new System.Drawing.Size(23, 22);
+            this.savebt.Text = "L";
+            this.savebt.Click += new System.EventHandler(this.toolStripButton12_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
+            // removeBt
+            // 
+            this.removeBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.removeBt.Image = global::easyERP.Properties.Resources.remove;
+            this.removeBt.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.removeBt.Name = "removeBt";
+            this.removeBt.Size = new System.Drawing.Size(23, 22);
+            this.removeBt.Text = "toolStripButton1";
+            this.removeBt.Click += new System.EventHandler(this.removeBt_Click);
+            // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton10.Text = "toolStripButton1";
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton9.Text = "toolStripButton1";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton8.Text = "toolStripButton1";
+            // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton7.Text = "toolStripButton1";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton6.Text = "toolStripButton1";
+            // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton5.Text = "toolStripButton1";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
             this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
             // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton4.Text = "toolStripButton1";
+            // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
             this.toolStripSeparator11.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton3.Text = "toolStripButton1";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton1";
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = global::easyERP.Properties.Resources.avançar;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // menuStrip1
             // 
@@ -314,11 +476,12 @@
             this.grupoDeProdutosToolStripMenuItem.Name = "grupoDeProdutosToolStripMenuItem";
             this.grupoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.grupoDeProdutosToolStripMenuItem.Text = "Grupo de Produtos";
+            this.grupoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.grupoDeProdutosToolStripMenuItem_Click);
             // 
             // tipoDeProdutosToolStripMenuItem
             // 
             this.tipoDeProdutosToolStripMenuItem.Name = "tipoDeProdutosToolStripMenuItem";
-            this.tipoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.tipoDeProdutosToolStripMenuItem.Text = "Tipo de Produtos";
             this.tipoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.tipoDeProdutosToolStripMenuItem_Click);
             // 
@@ -336,7 +499,7 @@
             this.nprdGrpBox.Enabled = false;
             this.nprdGrpBox.Location = new System.Drawing.Point(33, 335);
             this.nprdGrpBox.Name = "nprdGrpBox";
-            this.nprdGrpBox.Size = new System.Drawing.Size(767, 55);
+            this.nprdGrpBox.Size = new System.Drawing.Size(802, 55);
             this.nprdGrpBox.TabIndex = 19;
             this.nprdGrpBox.TabStop = false;
             this.nprdGrpBox.Text = "Novo / Editar";
@@ -344,209 +507,24 @@
             // 
             // obsTxt
             // 
-            this.obsTxt.Location = new System.Drawing.Point(440, 19);
+            this.obsTxt.Location = new System.Drawing.Point(443, 19);
             this.obsTxt.Name = "obsTxt";
-            this.obsTxt.Size = new System.Drawing.Size(296, 20);
+            this.obsTxt.Size = new System.Drawing.Size(352, 20);
             this.obsTxt.TabIndex = 18;
             // 
             // codTXT
             // 
             this.codTXT.Location = new System.Drawing.Point(6, 19);
             this.codTXT.Name = "codTXT";
-            this.codTXT.Size = new System.Drawing.Size(128, 20);
+            this.codTXT.Size = new System.Drawing.Size(68, 20);
             this.codTXT.TabIndex = 14;
             // 
             // descTxt
             // 
-            this.descTxt.Location = new System.Drawing.Point(140, 19);
+            this.descTxt.Location = new System.Drawing.Point(80, 19);
             this.descTxt.Name = "descTxt";
-            this.descTxt.Size = new System.Drawing.Size(294, 20);
+            this.descTxt.Size = new System.Drawing.Size(357, 20);
             this.descTxt.TabIndex = 16;
-            // 
-            // id
-            // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "ID";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 20;
-            // 
-            // codGrupo
-            // 
-            this.codGrupo.DataPropertyName = "codGrupo";
-            this.codGrupo.HeaderText = "CÓDIGO";
-            this.codGrupo.Name = "codGrupo";
-            this.codGrupo.ReadOnly = true;
-            this.codGrupo.Width = 80;
-            // 
-            // descGrupo
-            // 
-            this.descGrupo.DataPropertyName = "descGrupo";
-            this.descGrupo.HeaderText = "DESCRIÇÃO";
-            this.descGrupo.Name = "descGrupo";
-            this.descGrupo.ReadOnly = true;
-            this.descGrupo.Width = 320;
-            // 
-            // nvc1
-            // 
-            this.nvc1.DataPropertyName = "nvc1";
-            this.nvc1.HeaderText = "OBSERVAÇÃO";
-            this.nvc1.Name = "nvc1";
-            this.nvc1.ReadOnly = true;
-            this.nvc1.Width = 300;
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            // 
-            // newBt
-            // 
-            this.newBt.BackgroundImage = global::easyERP.Properties.Resources.add;
-            this.newBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.newBt.Image = global::easyERP.Properties.Resources.add;
-            this.newBt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newBt.Name = "newBt";
-            this.newBt.Size = new System.Drawing.Size(23, 22);
-            this.newBt.Text = "Incluir";
-            this.newBt.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // editBt
-            // 
-            this.editBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.editBt.Image = global::easyERP.Properties.Resources.edit_icon;
-            this.editBt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.editBt.Name = "editBt";
-            this.editBt.Size = new System.Drawing.Size(23, 22);
-            this.editBt.Text = "toolStripButton1";
-            this.editBt.Click += new System.EventHandler(this.toolStripButton14_Click);
-            // 
-            // cancelbt
-            // 
-            this.cancelbt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cancelbt.Enabled = false;
-            this.cancelbt.Image = global::easyERP.Properties.Resources.cancel;
-            this.cancelbt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.cancelbt.Name = "cancelbt";
-            this.cancelbt.Size = new System.Drawing.Size(23, 22);
-            this.cancelbt.Text = "toolStripButton1";
-            this.cancelbt.Click += new System.EventHandler(this.toolStripButton13_Click);
-            // 
-            // savebt
-            // 
-            this.savebt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.savebt.Enabled = false;
-            this.savebt.Image = global::easyERP.Properties.Resources.save;
-            this.savebt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.savebt.Name = "savebt";
-            this.savebt.Size = new System.Drawing.Size(23, 22);
-            this.savebt.Text = "toolStripButton1";
-            this.savebt.Click += new System.EventHandler(this.toolStripButton12_Click);
-            // 
-            // removeBt
-            // 
-            this.removeBt.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.removeBt.Image = global::easyERP.Properties.Resources.remove;
-            this.removeBt.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.removeBt.Name = "removeBt";
-            this.removeBt.Size = new System.Drawing.Size(23, 22);
-            this.removeBt.Text = "toolStripButton1";
-            this.removeBt.Click += new System.EventHandler(this.removeBt_Click);
-            // 
-            // toolStripButton10
-            // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton10.Text = "toolStripButton1";
-            // 
-            // toolStripButton9
-            // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton9.Text = "toolStripButton1";
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton8.Text = "toolStripButton1";
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Text = "toolStripButton1";
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "toolStripButton1";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "toolStripButton1";
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "toolStripButton1";
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton1";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = global::easyERP.Properties.Resources.avançar;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
             // 
             // groupBox1
             // 
@@ -554,11 +532,57 @@
             this.groupBox1.Controls.Add(this.grupoPrdGridView);
             this.groupBox1.Location = new System.Drawing.Point(75, 84);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(834, 418);
+            this.groupBox1.Size = new System.Drawing.Size(852, 418);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Grupo de produtos";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // easyCaixaDataSet
+            // 
+            this.easyCaixaDataSet.DataSetName = "easyCaixaDataSet";
+            this.easyCaixaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // grupoProdutoBindingSource
+            // 
+            this.grupoProdutoBindingSource.DataMember = "GrupoProduto";
+            this.grupoProdutoBindingSource.DataSource = this.easyCaixaDataSet;
+            // 
+            // grupoProdutoTableAdapter
+            // 
+            this.grupoProdutoTableAdapter.ClearBeforeFill = true;
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // codGrupoDataGridViewTextBoxColumn
+            // 
+            this.codGrupoDataGridViewTextBoxColumn.DataPropertyName = "codGrupo";
+            this.codGrupoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codGrupoDataGridViewTextBoxColumn.Name = "codGrupoDataGridViewTextBoxColumn";
+            this.codGrupoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codGrupoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // descGrupoDataGridViewTextBoxColumn
+            // 
+            this.descGrupoDataGridViewTextBoxColumn.DataPropertyName = "descGrupo";
+            this.descGrupoDataGridViewTextBoxColumn.HeaderText = "DESCRIÇÃO";
+            this.descGrupoDataGridViewTextBoxColumn.Name = "descGrupoDataGridViewTextBoxColumn";
+            this.descGrupoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descGrupoDataGridViewTextBoxColumn.Width = 350;
+            // 
+            // nvc1DataGridViewTextBoxColumn
+            // 
+            this.nvc1DataGridViewTextBoxColumn.DataPropertyName = "nvc1";
+            this.nvc1DataGridViewTextBoxColumn.HeaderText = "OBSERVAÇÃO";
+            this.nvc1DataGridViewTextBoxColumn.Name = "nvc1DataGridViewTextBoxColumn";
+            this.nvc1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nvc1DataGridViewTextBoxColumn.Width = 350;
             // 
             // grupoPrdForm
             // 
@@ -579,6 +603,8 @@
             this.nprdGrpBox.ResumeLayout(false);
             this.nprdGrpBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.easyCaixaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grupoProdutoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,13 +660,16 @@
         private System.Windows.Forms.TextBox obsTxt;
         private System.Windows.Forms.TextBox codTXT;
         private System.Windows.Forms.TextBox descTxt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codGrupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descGrupo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nvc1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private View.grupoProduto.easyCaixaDataSet easyCaixaDataSet;
+        private System.Windows.Forms.BindingSource grupoProdutoBindingSource;
+        private View.grupoProduto.easyCaixaDataSetTableAdapters.GrupoProdutoTableAdapter grupoProdutoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codGrupoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descGrupoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nvc1DataGridViewTextBoxColumn;
     }
 }

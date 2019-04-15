@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="easyCaixaDataSet1" targetNamespace="http://tempuri.org/easyCaixaDataSet1.xsd" xmlns:mstns="http://tempuri.org/easyCaixaDataSet1.xsd" xmlns="http://tempuri.org/easyCaixaDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="easyCaixaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="easyCaixaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.easyERP.Properties.Settings.GlobalReference.Default.easyCaixaConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_subgrupoTableAdapter" GeneratorDataComponentClassName="View_subgrupoTableAdapter" Name="View_subgrupo" UserDataComponentName="View_subgrupoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="easyCaixaConnectionString (Settings)" DbObjectName="easyCaixa.dbo.View_subgrupo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, codSubgrupo, descSubgrupo, nvc1, descGrupo FROM dbo.View_subgrupo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="codSubgrupo" DataSetColumn="codSubgrupo" />
+              <Mapping SourceColumn="descSubgrupo" DataSetColumn="descSubgrupo" />
+              <Mapping SourceColumn="nvc1" DataSetColumn="nvc1" />
+              <Mapping SourceColumn="descGrupo" DataSetColumn="descGrupo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="easyCaixaConnectionString (Settings)" DbObjectName="easyCaixa.dbo.View_subgrupo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        id, codSubgrupo, descSubgrupo, nvc1, descGrupo
+FROM            View_subgrupo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="easyCaixaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="easyCaixaDataSet1" msprop:Generator_UserDSName="easyCaixaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_subgrupo" msprop:Generator_TableClassName="View_subgrupoDataTable" msprop:Generator_TableVarName="tableView_subgrupo" msprop:Generator_RowChangedName="View_subgrupoRowChanged" msprop:Generator_TablePropName="View_subgrupo" msprop:Generator_RowDeletingName="View_subgrupoRowDeleting" msprop:Generator_RowChangingName="View_subgrupoRowChanging" msprop:Generator_RowEvHandlerName="View_subgrupoRowChangeEventHandler" msprop:Generator_RowDeletedName="View_subgrupoRowDeleted" msprop:Generator_RowClassName="View_subgrupoRow" msprop:Generator_UserTableName="View_subgrupo" msprop:Generator_RowEvArgName="View_subgrupoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="codSubgrupo" msprop:Generator_ColumnVarNameInTable="columncodSubgrupo" msprop:Generator_ColumnPropNameInRow="codSubgrupo" msprop:Generator_ColumnPropNameInTable="codSubgrupoColumn" msprop:Generator_UserColumnName="codSubgrupo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descSubgrupo" msprop:Generator_ColumnVarNameInTable="columndescSubgrupo" msprop:Generator_ColumnPropNameInRow="descSubgrupo" msprop:Generator_ColumnPropNameInTable="descSubgrupoColumn" msprop:Generator_UserColumnName="descSubgrupo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nvc1" msprop:Generator_ColumnVarNameInTable="columnnvc1" msprop:Generator_ColumnPropNameInRow="nvc1" msprop:Generator_ColumnPropNameInTable="nvc1Column" msprop:Generator_UserColumnName="nvc1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descGrupo" msprop:Generator_ColumnVarNameInTable="columndescGrupo" msprop:Generator_ColumnPropNameInRow="descGrupo" msprop:Generator_ColumnPropNameInTable="descGrupoColumn" msprop:Generator_UserColumnName="descGrupo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_subgrupo" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

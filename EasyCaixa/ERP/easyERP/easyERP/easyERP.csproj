@@ -55,12 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="easyCaixaDataSet.Designer.cs">
+    <Compile Include="View\grupoProduto\easyCaixaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="easyCaixaDataSet1.Designer.cs">
+    <Compile Include="View\subgProduto\easyCaixaDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
@@ -81,10 +81,10 @@
     <Compile Include="Model\sysdiagrams.cs" />
     <Compile Include="Model\TipoEntrada.cs" />
     <Compile Include="Model\tipoSaida.cs" />
-    <Compile Include="View\grupoPrdForm.cs">
+    <Compile Include="View\grupoProduto\grupoPrdForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\grupoPrdForm.Designer.cs">
+    <Compile Include="View\grupoProduto\grupoPrdForm.Designer.cs">
       <DependentUpon>grupoPrdForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\homeForm.cs">
@@ -95,13 +95,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\subgrupoPrdForm.cs">
+    <Compile Include="View\subgProduto\subgrupoPrdForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\subgrupoPrdForm.Designer.cs">
+    <Compile Include="View\subgProduto\subgrupoPrdForm.Designer.cs">
       <DependentUpon>subgrupoPrdForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\grupoPrdForm.resx">
+    <EmbeddedResource Include="View\grupoProduto\grupoPrdForm.resx">
       <DependentUpon>grupoPrdForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\homeForm.resx">
@@ -117,29 +117,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\subgrupoPrdForm.resx">
+    <EmbeddedResource Include="View\subgProduto\subgrupoPrdForm.resx">
       <DependentUpon>subgrupoPrdForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="easyCaixaDataSet.xsc">
+    <None Include="View\grupoProduto\easyCaixaDataSet.xsc">
       <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="easyCaixaDataSet.xsd">
+    <None Include="View\grupoProduto\easyCaixaDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>easyCaixaDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="easyCaixaDataSet.xss">
+    <None Include="View\grupoProduto\easyCaixaDataSet.xss">
       <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
     </None>
-    <None Include="easyCaixaDataSet1.xsc">
+    <None Include="View\subgProduto\easyCaixaDataSet1.xsc">
       <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="easyCaixaDataSet1.xsd">
+    <None Include="View\subgProduto\easyCaixaDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>easyCaixaDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="easyCaixaDataSet1.xss">
+    <None Include="View\subgProduto\easyCaixaDataSet1.xss">
       <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -163,5 +163,6 @@
   <ItemGroup>
     <None Include="Resources\avançar.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

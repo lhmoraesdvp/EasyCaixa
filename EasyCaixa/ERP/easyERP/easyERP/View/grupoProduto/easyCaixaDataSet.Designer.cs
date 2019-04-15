@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace easyERP {
+namespace easyERP.View.grupoProduto {
     
     
     /// <summary>
@@ -1021,7 +1021,7 @@ namespace easyERP {
         }
     }
 }
-namespace easyERP.easyCaixaDataSetTableAdapters {
+namespace easyERP.View.grupoProduto.easyCaixaDataSetTableAdapters {
     
     
     /// <summary>

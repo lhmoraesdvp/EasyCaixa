@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(subgrupoPrdForm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newBt = new System.Windows.Forms.ToolStripButton();
@@ -75,8 +76,29 @@
             this.grupoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parametrosFinanceirosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.EditGrpBox = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.obsTxt = new System.Windows.Forms.TextBox();
+            this.codTXT = new System.Windows.Forms.TextBox();
+            this.descTxt = new System.Windows.Forms.TextBox();
+            this.GridView = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codSubgrupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descSubgrupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nvc1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descGrupoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.viewsubgrupoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.easyCaixaDataSet1 = new easyERP.View.subgProduto.easyCaixaDataSet1();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.view_subgrupoTableAdapter = new easyERP.View.subgProduto.easyCaixaDataSet1TableAdapters.View_subgrupoTableAdapter();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.EditGrpBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewsubgrupoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.easyCaixaDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStrip1
@@ -112,7 +134,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1002, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1004, 25);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -140,6 +162,7 @@
             this.editBt.Name = "editBt";
             this.editBt.Size = new System.Drawing.Size(23, 22);
             this.editBt.Text = "toolStripButton1";
+            this.editBt.Click += new System.EventHandler(this.editBt_Click);
             // 
             // toolStripSeparator2
             // 
@@ -155,6 +178,7 @@
             this.cancelbt.Name = "cancelbt";
             this.cancelbt.Size = new System.Drawing.Size(23, 22);
             this.cancelbt.Text = "toolStripButton1";
+            this.cancelbt.Click += new System.EventHandler(this.cancelbt_Click);
             // 
             // toolStripSeparator3
             // 
@@ -170,6 +194,7 @@
             this.savebt.Name = "savebt";
             this.savebt.Size = new System.Drawing.Size(23, 22);
             this.savebt.Text = "toolStripButton1";
+            this.savebt.Click += new System.EventHandler(this.savebt_Click);
             // 
             // toolStripSeparator4
             // 
@@ -184,6 +209,7 @@
             this.removeBt.Name = "removeBt";
             this.removeBt.Size = new System.Drawing.Size(23, 22);
             this.removeBt.Text = "toolStripButton1";
+            this.removeBt.Click += new System.EventHandler(this.removeBt_Click);
             // 
             // toolStripSeparator5
             // 
@@ -331,7 +357,7 @@
             this.tabelasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1002, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1004, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -446,19 +472,166 @@
             this.parametrosFinanceirosToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.parametrosFinanceirosToolStripMenuItem.Text = "Parametros financeiros";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.EditGrpBox);
+            this.groupBox1.Controls.Add(this.GridView);
+            this.groupBox1.Location = new System.Drawing.Point(81, 84);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(915, 418);
+            this.groupBox1.TabIndex = 21;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sub Grupos Produtos";
+            // 
+            // EditGrpBox
+            // 
+            this.EditGrpBox.Controls.Add(this.comboBox1);
+            this.EditGrpBox.Controls.Add(this.obsTxt);
+            this.EditGrpBox.Controls.Add(this.codTXT);
+            this.EditGrpBox.Controls.Add(this.descTxt);
+            this.EditGrpBox.Enabled = false;
+            this.EditGrpBox.Location = new System.Drawing.Point(33, 335);
+            this.EditGrpBox.Name = "EditGrpBox";
+            this.EditGrpBox.Size = new System.Drawing.Size(862, 55);
+            this.EditGrpBox.TabIndex = 19;
+            this.EditGrpBox.TabStop = false;
+            this.EditGrpBox.Text = "Novo / Editar";
+            this.EditGrpBox.Enter += new System.EventHandler(this.EditGrpBox_Enter);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(692, 18);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 20;
+            // 
+            // obsTxt
+            // 
+            this.obsTxt.Location = new System.Drawing.Point(440, 19);
+            this.obsTxt.Name = "obsTxt";
+            this.obsTxt.Size = new System.Drawing.Size(233, 20);
+            this.obsTxt.TabIndex = 18;
+            // 
+            // codTXT
+            // 
+            this.codTXT.Location = new System.Drawing.Point(6, 19);
+            this.codTXT.Name = "codTXT";
+            this.codTXT.Size = new System.Drawing.Size(128, 20);
+            this.codTXT.TabIndex = 14;
+            // 
+            // descTxt
+            // 
+            this.descTxt.Location = new System.Drawing.Point(140, 19);
+            this.descTxt.Name = "descTxt";
+            this.descTxt.Size = new System.Drawing.Size(294, 20);
+            this.descTxt.TabIndex = 16;
+            // 
+            // GridView
+            // 
+            this.GridView.AllowUserToAddRows = false;
+            this.GridView.AllowUserToDeleteRows = false;
+            this.GridView.AllowUserToOrderColumns = true;
+            this.GridView.AutoGenerateColumns = false;
+            this.GridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.codSubgrupoDataGridViewTextBoxColumn,
+            this.descSubgrupoDataGridViewTextBoxColumn,
+            this.nvc1DataGridViewTextBoxColumn,
+            this.descGrupoDataGridViewTextBoxColumn});
+            this.GridView.DataSource = this.viewsubgrupoBindingSource;
+            this.GridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.GridView.Location = new System.Drawing.Point(33, 39);
+            this.GridView.Name = "GridView";
+            this.GridView.ReadOnly = true;
+            this.GridView.Size = new System.Drawing.Size(876, 290);
+            this.GridView.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codSubgrupoDataGridViewTextBoxColumn
+            // 
+            this.codSubgrupoDataGridViewTextBoxColumn.DataPropertyName = "codSubgrupo";
+            this.codSubgrupoDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codSubgrupoDataGridViewTextBoxColumn.Name = "codSubgrupoDataGridViewTextBoxColumn";
+            this.codSubgrupoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codSubgrupoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // descSubgrupoDataGridViewTextBoxColumn
+            // 
+            this.descSubgrupoDataGridViewTextBoxColumn.DataPropertyName = "descSubgrupo";
+            this.descSubgrupoDataGridViewTextBoxColumn.HeaderText = "Descrição";
+            this.descSubgrupoDataGridViewTextBoxColumn.Name = "descSubgrupoDataGridViewTextBoxColumn";
+            this.descSubgrupoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descSubgrupoDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // nvc1DataGridViewTextBoxColumn
+            // 
+            this.nvc1DataGridViewTextBoxColumn.DataPropertyName = "nvc1";
+            this.nvc1DataGridViewTextBoxColumn.HeaderText = "OBSERVAÇÃO";
+            this.nvc1DataGridViewTextBoxColumn.Name = "nvc1DataGridViewTextBoxColumn";
+            this.nvc1DataGridViewTextBoxColumn.ReadOnly = true;
+            this.nvc1DataGridViewTextBoxColumn.Width = 250;
+            // 
+            // descGrupoDataGridViewTextBoxColumn
+            // 
+            this.descGrupoDataGridViewTextBoxColumn.DataPropertyName = "descGrupo";
+            this.descGrupoDataGridViewTextBoxColumn.HeaderText = "GRUPO";
+            this.descGrupoDataGridViewTextBoxColumn.Name = "descGrupoDataGridViewTextBoxColumn";
+            this.descGrupoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.descGrupoDataGridViewTextBoxColumn.Width = 230;
+            // 
+            // viewsubgrupoBindingSource
+            // 
+            this.viewsubgrupoBindingSource.DataMember = "View_subgrupo";
+            this.viewsubgrupoBindingSource.DataSource = this.easyCaixaDataSet1;
+            // 
+            // easyCaixaDataSet1
+            // 
+            this.easyCaixaDataSet1.DataSetName = "easyCaixaDataSet1";
+            this.easyCaixaDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 49);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(1004, 25);
+            this.fillByToolStrip.TabIndex = 22;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // view_subgrupoTableAdapter
+            // 
+            this.view_subgrupoTableAdapter.ClearBeforeFill = true;
+            // 
             // subgrupoPrdForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 503);
+            this.ClientSize = new System.Drawing.Size(1004, 583);
+            this.Controls.Add(this.fillByToolStrip);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "subgrupoPrdForm";
             this.Text = "SubGrupo de Produtos";
+            this.Load += new System.EventHandler(this.subgrupoPrdForm_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.EditGrpBox.ResumeLayout(false);
+            this.EditGrpBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewsubgrupoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.easyCaixaDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,5 +685,21 @@
         private System.Windows.Forms.ToolStripMenuItem grupoDeProdutosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDeProdutosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem parametrosFinanceirosToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox EditGrpBox;
+        private System.Windows.Forms.TextBox obsTxt;
+        private System.Windows.Forms.TextBox codTXT;
+        private System.Windows.Forms.TextBox descTxt;
+        private System.Windows.Forms.DataGridView GridView;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private View.subgProduto.easyCaixaDataSet1  easyCaixaDataSet1;
+        private System.Windows.Forms.BindingSource viewsubgrupoBindingSource;
+        private View.subgProduto.easyCaixaDataSet1TableAdapters.View_subgrupoTableAdapter view_subgrupoTableAdapter;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codSubgrupoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descSubgrupoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nvc1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descGrupoDataGridViewTextBoxColumn;
     }
 }
