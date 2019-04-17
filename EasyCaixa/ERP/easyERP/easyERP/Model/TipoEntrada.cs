@@ -17,7 +17,8 @@ namespace easyERP.Model
 
         public int id { get; set; }
 
-        public int? codEntrada { get; set; }
+        [StringLength(50)]
+        public string codEntrada { get; set; }
 
         [StringLength(100)]
         public string descricaoEntrada { get; set; }

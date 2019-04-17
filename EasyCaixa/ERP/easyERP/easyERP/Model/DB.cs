@@ -27,6 +27,7 @@ namespace easyERP.Model
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TipoEntrada> TipoEntrada { get; set; }
         public virtual DbSet<tipoSaida> tipoSaida { get; set; }
+        public virtual DbSet<View_subgrupo> View_subgrupo { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

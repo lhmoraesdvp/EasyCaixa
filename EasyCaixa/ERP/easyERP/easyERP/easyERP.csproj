@@ -55,16 +55,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\grupoProduto\easyCaixaDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="View\subgProduto\easyCaixaDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Model\Clientes.cs" />
     <Compile Include="Model\ContasAReceber.cs" />
     <Compile Include="Model\cupom.cs" />
@@ -81,16 +71,37 @@
     <Compile Include="Model\sysdiagrams.cs" />
     <Compile Include="Model\TipoEntrada.cs" />
     <Compile Include="Model\tipoSaida.cs" />
+    <Compile Include="Model\View_subgrupo.cs" />
+    <Compile Include="View\tipoSaida\tipoSaidaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tipoSaidaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\tipoEntrada\tipoEntradaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tipoEntradaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\grupoProduto\easyCaixaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\subgProduto\easyCaixaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>easyCaixaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\grupoProduto\grupoPrdForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\grupoProduto\grupoPrdForm.Designer.cs">
       <DependentUpon>grupoPrdForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\homeForm.cs">
+    <Compile Include="View\home\homeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\homeForm.Designer.cs">
+    <Compile Include="View\home\homeForm.Designer.cs">
       <DependentUpon>homeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -101,10 +112,22 @@
     <Compile Include="View\subgProduto\subgrupoPrdForm.Designer.cs">
       <DependentUpon>subgrupoPrdForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\tipoEntrada\tipoEntradaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\tipoEntrada\tipoEntradaForm.Designer.cs">
+      <DependentUpon>tipoEntradaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\tipoSaida\tipoSaidaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\tipoSaida\tipoSaidaForm.Designer.cs">
+      <DependentUpon>tipoSaidaForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="View\grupoProduto\grupoPrdForm.resx">
       <DependentUpon>grupoPrdForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\homeForm.resx">
+    <EmbeddedResource Include="View\home\homeForm.resx">
       <DependentUpon>homeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -120,6 +143,34 @@
     <EmbeddedResource Include="View\subgProduto\subgrupoPrdForm.resx">
       <DependentUpon>subgrupoPrdForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\tipoEntrada\tipoEntradaForm.resx">
+      <DependentUpon>tipoEntradaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\tipoSaida\tipoSaidaForm.resx">
+      <DependentUpon>tipoSaidaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="View\tipoSaida\tipoSaidaDataSet.xsc">
+      <DependentUpon>tipoSaidaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\tipoSaida\tipoSaidaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tipoSaidaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\tipoSaida\tipoSaidaDataSet.xss">
+      <DependentUpon>tipoSaidaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\tipoEntrada\tipoEntradaDataSet.xsc">
+      <DependentUpon>tipoEntradaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="View\tipoEntrada\tipoEntradaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>tipoEntradaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="View\tipoEntrada\tipoEntradaDataSet.xss">
+      <DependentUpon>tipoEntradaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="View\grupoProduto\easyCaixaDataSet.xsc">
       <DependentUpon>easyCaixaDataSet.xsd</DependentUpon>
     </None>
@@ -155,7 +206,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />

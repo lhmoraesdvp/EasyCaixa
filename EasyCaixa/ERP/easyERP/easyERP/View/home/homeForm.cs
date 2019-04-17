@@ -94,5 +94,23 @@ namespace easyERP
             sbgprd.ShowDialog();
                 
                 }
+
+        private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tipoDeEntradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View.tipoEntrada.tipoEntradaForm ti = new View.tipoEntrada.tipoEntradaForm();
+            ti.ShowDialog();
+        }
+
+        private void tipoDeSaidaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            View.tipoSaida.tipoSaidaForm saida = new View.tipoSaida.tipoSaidaForm();
+            saida.ShowDialog();
+
+        }
     }
 }

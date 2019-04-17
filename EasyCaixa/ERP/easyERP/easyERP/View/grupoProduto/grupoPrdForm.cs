@@ -290,6 +290,11 @@ namespace easyERP
         {
 
         }
+
+        private void contasAReceberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
        
